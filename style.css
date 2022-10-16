@@ -101,13 +101,15 @@ input:focus {
 
 /* ---------------------- CONTENT SECTION----------------------- */
 .heading--1 {
+  color: white;
   text-align: center;
   font-size: 5rem;
   font-weight: var(--fw-xbold);
-  color: white;
   text-shadow: var(--text-shadow-md);
+
+  margin-bottom: 3rem;
+
   user-select: none;
-  margin-bottom: 5rem;
 }
 
 .content-container {
@@ -324,7 +326,8 @@ input:focus {
 .slider {
   position: absolute;
   /* left: 50%; */
-  translate: -50% -50%;
+  translate: -50% 0;
+  /* translate: -50% -50%; */
 
   z-index: 100;
   cursor: pointer;
@@ -362,8 +365,6 @@ input:focus {
   width: 100%;
   height: 23%;
   overflow: hidden;
-
-  /* background-color: red; */
 }
 
 .card-container {
@@ -379,7 +380,7 @@ input:focus {
   gap: 3rem;
   overflow: hidden;
 
-  animation: bg-animate 300s infinite;
+  animation: bg-animate 400s infinite;
 }
 
 .bg-card {
@@ -407,6 +408,6 @@ input:focus {
   }
 
   to {
-    translate: 50% 0;
+    translate: 0 0;
   }
 }

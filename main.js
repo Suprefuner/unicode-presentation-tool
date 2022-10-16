@@ -19,7 +19,7 @@ const createSlider = (content) => {
   slider.classList.add("slider")
   slider.innerHTML = `<i class="fas fa-arrows-alt-h"></i>`
   content.parentNode.insertAdjacentElement("afterbegin", slider)
-  slider.style.top = `${contentBefore.offsetHeight / 2}px`
+  slider.style.top = `${contentAfter.offsetHeight / 2}px`
   slider.style.left = `50%`
 }
 
@@ -224,7 +224,7 @@ wrapper.addEventListener("click", function (e) {
 
 const cardContainer = document.querySelector(".card-container")
 
-const numOfCard = 70
+const numOfCard = 100
 
 const cardArr = Array.from({ length: numOfCard }, () => [])
 
