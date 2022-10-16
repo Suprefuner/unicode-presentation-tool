@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unicode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/ea4456f54e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="heading--1">UICODE</h1>
+      <div class="content-container">
+        <div class="content content-after">
+          <div class="content-header">
+            <h2 class="content-title">Unicode to String</h2>
+            <div class="content-tool-group">
+              <input
+                type="number"
+                placeholder="Number of input (MAX 3)"
+                class="input input--num"
+              />
+              <button class="btn btn--translate">Translate</button>
+              <button class="btn btn--reset">Reset</button>
+            </div>
+          </div>
+          <div class="content-main">
+            <!-- <div class="translate-group">
+              <div class="input-group">
+                <span>unicode</span>
+                <input type="text" class="input unicode" maxlength="8" />
+              </div>
+              <i class="fas fa-arrow-down"></i>
+              <div class="output-group">
+                <span>string</span>
+                <input type="text" class="output string" />
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="content content-before">
+          <div class="content-header">
+            <h2 class="content-title">String to Unicode</h2>
+            <div class="content-tool-group">
+              <input
+                type="number"
+                placeholder="Number of input (MAX 3)"
+                class="input input--num"
+              />
+              <button class="btn btn--translate">Translate</button>
+              <button class="btn btn--reset">Reset</button>
+            </div>
+          </div>
+          <div class="content-main">
+            <!-- <div class="translate-group">
+              <div class="input-group">
+                <span>string</span>
+                <input type="text" class="input string" />
+              </div>
+              <i class="fas fa-arrow-down"></i>
+              <div class="output-group">
+                <span>unicode</span>
+                <div class="output unicode"></div>
+                <input type="text" class="output unicode" />
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <audio class="tat-video">
+      <source src="./images/finish.mp3" type="audio/mp3" />
+    </audio>
+    <div class="bg">
+      <div class="card-container"></div>
+    </div>
+  </body>
+</html>
