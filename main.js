@@ -118,9 +118,13 @@ const renderInputGroup = function (num = initNum, [...container] = contents) {
 
   slider.style.top = `${contentBefore.offsetHeight / 2}px`
   const inputs = wrapper.querySelectorAll(".input")
+  const outputs = wrapper.querySelectorAll(".output")
   inputs.forEach((input) => {
     input.addEventListener("paste", detectEmoji)
     input.addEventListener("input", resetMaxlength)
+  })
+  outputs.forEach((output) => {
+    output.addEventListener("click", switchUTF)
   })
 }
 
@@ -133,6 +137,16 @@ function detectEmoji(e) {
   const paste = e.clipboardData.getData("text")
   if (!/\p{Emoji}/u.test(paste)) e.target.setAttribute("maxlength", "1")
   else e.target.setAttribute("maxlength", `${paste.length}`)
+}
+
+function switchUTF(e) {
+  let output = e.target
+  const text = output.textContent
+
+  if (!text) return
+  if (text.startsWith("U+")) output.textContent = parseInt(+text.slice(2), 16)
+  if (!text.startsWith("U+"))
+    output.textContent = `U+${Number(output.textContent).toString(16)}`
 }
 
 renderInputGroup()
